@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" >
+        <form action="/addstudent">
+            <h3 align="center">AJOUTER UN ÉTUDIANT</h3>
+            <hr>
+            <label for="name">
+                <b>Nom d'étudiant</b>
+            </label>
+            <input  type="text" 
+                    placeholder="Entrez votre nom : " 
+                    name="name" id="name" required>
+            <br>
+            <br>
+            <label for="phn">
+                <b>Numéro de téléphone</b>
+            </label>
+            <input  type="phone" 
+                    placeholder="Entrez le numéro de 
+                                téléphone : " 
+                    name="phone" 
+                    id="phone" required>
+               <br>   <br>
+            <label for="eml-id">
+                <b>Identifiant de messagerie</b>
+            </label>
+            <input  type="email" 
+                    placeholder="Entrez l'identifiant 
+                                de messagerie : " 
+                    name="email" 
+                    id="email" required>
+            <br>   <br>
+            <div class="gender_g">
+                <strong>Genre</strong>
+                <input  type="radio" 
+                        name="gender" 
+                        id="" 
+                        value="Male">Homme
+
+                <input  type="radio" 
+                        name="gender" 
+                        id="" 
+                        value="Female">Femme
+            </div>
+            <br>   <br>
+            <button type="submit" 
+                    class="registerbtn">
+                        AJOUTER UN ÉTUDIAN
+            </button>
+
+            <a href="./" style="color:black">
+                RETOUR À LA PAGE D'ACCUEIL
+            </a>
+            
+            <br>
+            
+            {{#if mesg}}
+                <h3>Enregistrement inséré avec succès</h3>
+            {{/if}}
+            {{#if checkmesg}}
+                <h3>Identifiant de messagerie 
+                    ou numéro de téléphone déjà présent
+                </h3>
+            {{/if}}
+        </form>
+    </div>
+</body>
+</html>

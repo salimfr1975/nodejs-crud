@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/removestudent">
+            <h3>RECHERCHE ETUDIANT</h3>
+            <hr>
+            <label for="phn"><b>Numéro de téléphone</b></label>
+            <input type="phone" placeholder="Tapez le numéro de téléphone à rechercher" name="phone" id="phone" required>
+            
+            <br>   <br><br>   <br>
+            <button type="submit" class="registerbtn">SUPPRIMER L'ÉLÈVE</button>
+            <a href="./" style="color:black">RETOUR À LA PAGE D'ACCUEIL</a>
+            <br>
+            {{#if mesg1}}
+                <h3>Enregistrement supprimé</h3>
+            {{/if}}
+            {{#if mesg2}}
+                <h3>Enregistrement non supprimé</h3>
+            {{/if}}
+        </form>
+    </div>
+</body>
+</html>
+
